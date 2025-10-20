@@ -52,7 +52,7 @@ fi
 # - Supports TEXT output
 # - Supports chosen inference type (ON_DEMAND or PROVISIONED)
 # Normalize inference type to Bedrock's enum values
-if [[ "$INFERENCE_TYPE" =~ ^(?i:on[\-_]?demand)$ ]]; then
+if [[ "$(echo "$INFERENCE_TYPE" | tr '[:upper:]' '[:lower:]')" =~ ^on[-_]?demand$ ]]; then
 	INFERENCE_ENUM="ON_DEMAND"
 else
 	INFERENCE_ENUM="PROVISIONED"
