@@ -31,7 +31,7 @@ require() {
 require aws
 require jq
 
-AWS_REGION=${AWS_REGION:-us-east-1}
+AWS_REGION=${AWS_REGION:-us-east-2}
 FORCE_MODEL_ID=${FORCE_MODEL_ID:-}
 PROMPT=${PROMPT:-"Write a long essay about the ocean and climate."}
 TEMPERATURE=${TEMPERATURE:-0.7}
